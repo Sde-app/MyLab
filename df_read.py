@@ -52,24 +52,24 @@ print(result)
 
 # COMMAND ----------
 
-############################                      Level 1 : Basic Function
-# Function to print "Hello, world!"
+############################ Level 1: Basic Function
+# A simple function to print "Hello, world!"
 def my_function():
-    print("Hello, world!")
+    print("Hello, world!")  # This line prints the message "Hello, world!"
 
 # Call the basic function
-my_function()
+my_function()  # This calls the function and prints "Hello, world!"
 
-############################                     Level 2 : Function with Parameters
-# Function to greet a user by name
+############################ Level 2: Function with Parameters
+# A function that takes a parameter 'name' and greets the user
 def suresh(name):
-    print(f"Hello, {name}!")
+    print(f"Hello, {name}!")  # This prints a greeting using the 'name' argument
 
-# Call the 'suresh' function
-suresh("ravi")
+# Call the 'suresh' function with the argument "ravi"
+suresh("ravi")  # This will print: "Hello, ravi!"
 
-#############################                      Level 3 : Return Values
-# Function to add two numbers
+############################ Level 3: Return Values
+# A function that adds two numbers and returns the result
 def suresh_add(a, b):
     """ 
     This function adds two numbers.
@@ -80,127 +80,139 @@ def suresh_add(a, b):
     Returns:
     int/float: The sum of a and b.
     """
-    return a + b
+    return a + b  # The sum of 'a' and 'b' is returned
 
-# Example usage of suresh_add
-result = suresh_add(10, 20)
-print(f"The sum is: {result}")
+# Call the 'suresh_add' function with arguments 10 and 20
+result = suresh_add(10, 20)  # The function returns 30, which is stored in 'result'
+print(f"The sum is: {result}")  # This prints: "The sum is: 30"
 
-############################                     Level 4 : Default Parameters
-# Function with a default parameter
+############################ Level 4: Default Parameters
+# A function with a default parameter value
 def suresh_name(name="Guest"):
-    print(f"Hello, {name}!")
+    print(f"Hello, {name}!")  # This prints a greeting with the 'name' argument
 
-# Call the function with the default parameter
-suresh_name()  # Uses default value 'Guest'
-suresh_name("John")  # Uses passed value 'John'
+# Call the function without an argument (uses default 'Guest')
+suresh_name()  # This will print: "Hello, Guest!"
 
-#############################                      Level 5 : Docstrings
+# Call the function with a custom argument "John"
+suresh_name("John")  # This will print: "Hello, John!"
+
+############################ Level 5: Docstrings
+# A function that adds two numbers with a docstring
 def add(a, b):
     """
     This function adds two numbers
-    
+    This is a docstring explaining what the function does.
     """
+    return a + b  # This adds 'a' and 'b' and returns the result
 
-    return a + b
-
-#############################                      Level 6 : Variable Scope
-
-global_var = 10
+############################ Level 6: Variable Scope
+# A demonstration of variable scope (local vs global)
+global_var = 10  # This is a global variable
 
 def some_function():
-    local_var = 5
-    print(global_var + local_var)
+    local_var = 5  # This is a local variable inside the function
+    print(global_var + local_var)  # The function prints the sum of global and local variables
 
-some_function()
+some_function()  # This will print: 15 (10 from global_var and 5 from local_var)
 
-#############################                      Level 7 : Recursion
-
+############################ Level 7: Recursion
+# A recursive function to calculate the factorial of a number
 def factorial(n):
-    if n == 0:
+    if n == 0:  # Base case: factorial of 0 is 1
         return 1
-    else:
+    else:  # Recursive case: multiply the number by the factorial of (n-1)
         return n * factorial(n - 1)
 
-# Example usage of factorial function
-result = factorial(5)
-print(f"Factorial of 5 is: {result}")
+# Call the factorial function with 5
+result = factorial(5)  # The factorial of 5 is calculated as 5 * 4 * 3 * 2 * 1 = 120
+print(f"Factorial of 5 is: {result}")  # This will print: "Factorial of 5 is: 120"
 
-#############################                      Level 8 : Lambda Functions
+############################ Level 8: Lambda Functions
+# A lambda function to double a number
+double = lambda x: x * 2  # This defines a function that multiplies 'x' by 2
 
-double = lambda x: x * 2
-result = double(3)
-print(f"Double of 3 is: {result}")
+# Call the lambda function with 3
+result = double(3)  # The result is 6 (3 * 2)
+print(f"Double of 3 is: {result}")  # This will print: "Double of 3 is: 6"
 
-#############################                      Level 9 : Function Decorators
-
+############################ Level 9: Function Decorators
+# A decorator function that adds extra functionality before and after a function is called
 def my_decorator(func):
     def wrapper():
-        print("Something is happening before the function is called.")
-        func()
-        print("Something is happening after the function is called.")
-    return wrapper
+        print("Something is happening before the function is called.")  # This runs before the function
+        func()  # Call the original function
+        print("Something is happening after the function is called.")  # This runs after the function
+    return wrapper  # Return the wrapper function
 
+# Apply the decorator to the function 'say_hello'
 @my_decorator
 def say_hello():
-    print("Hello!")
+    print("Hello!")  # This is the original function's behavior
 
 # Call the decorated function
-say_hello()
+say_hello()  # This will print:
+# "Something is happening before the function is called."
+# "Hello!"
+# "Something is happening after the function is called."
 
-#############################                      Advanced Functions: Level 10 - Higher-Order Functions
-
-# Higher-Order Function Example
+############################ Advanced Functions: Level 10 - Higher-Order Functions
+# A higher-order function that takes a function and a number, then applies the function to the number
 def apply_function(f, x):
-    return f(x)
+    return f(x)  # Call the function 'f' with the argument 'x' and return the result
 
-# Function to square a number
+# A function to square a number
 def square(n):
-    return n * n
+    return n * n  # This returns the square of 'n'
 
-# Applying the higher-order function
-result = apply_function(square, 4)
-print(f"Square of 4 is: {result}")
+# Apply the 'apply_function' with the 'square' function and the number 4
+result = apply_function(square, 4)  # The result is 16 (4 * 4)
+print(f"Square of 4 is: {result}")  # This will print: "Square of 4 is: 16"
 
-#############################                      Advanced Functions: Level 11 - Nested Functions
-
-# Nested Function Example
+############################ Advanced Functions: Level 11 - Nested Functions
+# A function that contains another function inside it
 def outer_function(x):
+    # This is the inner function
     def inner_function(y):
-        return y + 10
-    return inner_function(x)
+        return y + 10  # This adds 10 to 'y'
+    
+    return inner_function(x)  # Call the inner function with 'x' as the argument
 
-# Calling the nested function
-result = outer_function(5)
-print(f"Result of nested function is: {result}")
+# Call the outer function with 5
+result = outer_function(5)  # The inner function adds 10 to 5, so the result is 15
+print(f"Result of nested function is: {result}")  # This will print: "Result of nested function is: 15"
 
-#############################                      Advanced Functions: Level 12 - Partial Functions
-
+############################ Advanced Functions: Level 12 - Partial Functions
+# Partial functions allow us to fix some arguments of a function
 from functools import partial
 
-# Partial Function Example
+# A function that multiplies two numbers
 def multiply(a, b):
-    return a * b
+    return a * b  # This multiplies 'a' and 'b'
 
-# Create a new function that multiplies by 2
-double_multiply = partial(multiply, 2)
+# Create a partial function that always multiplies by 2
+double_multiply = partial(multiply, 2)  # Now, 'double_multiply' takes only one argument
 
-# Calling the partial function
-result = double_multiply(5)
-print(f"Multiplying 2 by 5 gives: {result}")
+# Call the partial function with the argument 5
+result = double_multiply(5)  # This multiplies 2 by 5, so the result is 10
+print(f"Multiplying 2 by 5 gives: {result}")  # This will print: "Multiplying 2 by 5 gives: 10"
 
-#############################                      Advanced Functions: Level 13 - Function Caching
-
+############################ Advanced Functions: Level 13 - Function Caching
+# Function caching to optimize recursive functions (avoids recomputation)
 from functools import lru_cache
 
-# Function caching with LRU Cache
-@lru_cache(maxsize=None)  # Cache without size limit
+# A cached Fibonacci function
+@lru_cache(maxsize=None)  # The cache has no limit on the number of results it stores
 def fibonacci(n):
-    if n <= 1:
+    if n <= 1:  # Base case: if n is 0 or 1, return n
         return n
-    else:
+    else:  # Recursive case: calculate the Fibonacci number by summing the previous two numbers
         return fibonacci(n - 1) + fibonacci(n - 2)
 
-# Example usage of cached Fibonacci function
-result = fibonacci(30)
-print(f"Fibonacci of 30 is: {result}")
+# Call the cached Fibonacci function with 30
+result = fibonacci(30)  # The 30th Fibonacci number is computed, using the cache for efficiency
+print(f"Fibonacci of 30 is: {result}")  # This will print: "Fibonacci of 30 is: 832040"
+
+
+# COMMAND ----------
+
