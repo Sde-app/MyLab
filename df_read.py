@@ -52,7 +52,7 @@ print(result)
 
 # COMMAND ----------
 
-############################ Level 1: Basic Function
+############################ ------------------------------------------------------- Level 1: Basic Function
 # A simple function to print "Hello, world!"
 def my_function():
     print("Hello, world!")  # This line prints the message "Hello, world!"
@@ -60,7 +60,7 @@ def my_function():
 # Call the basic function
 my_function()  # This calls the function and prints "Hello, world!"
 
-############################ Level 2: Function with Parameters
+############################ ------------------------------------------------------- Level 2: Function with Parameters
 # A function that takes a parameter 'name' and greets the user
 def suresh(name):
     print(f"Hello, {name}!")  # This prints a greeting using the 'name' argument
@@ -68,7 +68,7 @@ def suresh(name):
 # Call the 'suresh' function with the argument "ravi"
 suresh("ravi")  # This will print: "Hello, ravi!"
 
-############################ Level 3: Return Values
+############################ ------------------------------------------------------- Level 3: Return Values
 # A function that adds two numbers and returns the result
 def suresh_add(a, b):
     """ 
@@ -86,7 +86,7 @@ def suresh_add(a, b):
 result = suresh_add(10, 20)  # The function returns 30, which is stored in 'result'
 print(f"The sum is: {result}")  # This prints: "The sum is: 30"
 
-############################ Level 4: Default Parameters
+############################ ------------------------------------------------------- Level 4: Default Parameters
 # A function with a default parameter value
 def suresh_name(name="Guest"):
     print(f"Hello, {name}!")  # This prints a greeting with the 'name' argument
@@ -97,7 +97,7 @@ suresh_name()  # This will print: "Hello, Guest!"
 # Call the function with a custom argument "John"
 suresh_name("John")  # This will print: "Hello, John!"
 
-############################ Level 5: Docstrings
+############################ ------------------------------------------------------- Level 5: Docstrings
 # A function that adds two numbers with a docstring
 def add(a, b):
     """
@@ -106,7 +106,7 @@ def add(a, b):
     """
     return a + b  # This adds 'a' and 'b' and returns the result
 
-############################ Level 6: Variable Scope
+############################  ------------------------------------------------------- Level 6: Variable Scope
 # A demonstration of variable scope (local vs global)
 global_var = 10  # This is a global variable
 
@@ -116,7 +116,7 @@ def some_function():
 
 some_function()  # This will print: 15 (10 from global_var and 5 from local_var)
 
-############################ Level 7: Recursion
+############################ ------------------------------------------------------- Level 7: Recursion
 # A recursive function to calculate the factorial of a number
 def factorial(n):
     if n == 0:  # Base case: factorial of 0 is 1
@@ -128,7 +128,7 @@ def factorial(n):
 result = factorial(5)  # The factorial of 5 is calculated as 5 * 4 * 3 * 2 * 1 = 120
 print(f"Factorial of 5 is: {result}")  # This will print: "Factorial of 5 is: 120"
 
-############################ Level 8: Lambda Functions
+############################ ------------------------------------------------------- Level 8: Lambda Functions
 # A lambda function to double a number
 double = lambda x: x * 2  # This defines a function that multiplies 'x' by 2
 
@@ -136,7 +136,7 @@ double = lambda x: x * 2  # This defines a function that multiplies 'x' by 2
 result = double(3)  # The result is 6 (3 * 2)
 print(f"Double of 3 is: {result}")  # This will print: "Double of 3 is: 6"
 
-############################ Level 9: Function Decorators
+############################ ------------------------------------------------------- Level 9: Function Decorators
 # A decorator function that adds extra functionality before and after a function is called
 def my_decorator(func):
     def wrapper():
@@ -156,7 +156,7 @@ say_hello()  # This will print:
 # "Hello!"
 # "Something is happening after the function is called."
 
-############################ Advanced Functions: Level 10 - Higher-Order Functions
+############################ ------------------------------------------------------- Advanced Functions: Level 10 - Higher-Order Functions
 # A higher-order function that takes a function and a number, then applies the function to the number
 def apply_function(f, x):
     return f(x)  # Call the function 'f' with the argument 'x' and return the result
@@ -169,7 +169,7 @@ def square(n):
 result = apply_function(square, 4)  # The result is 16 (4 * 4)
 print(f"Square of 4 is: {result}")  # This will print: "Square of 4 is: 16"
 
-############################ Advanced Functions: Level 11 - Nested Functions
+############################ -------------------------------------------------------Advanced Functions: Level 11 - Nested Functions
 # A function that contains another function inside it
 def outer_function(x):
     # This is the inner function
@@ -182,7 +182,7 @@ def outer_function(x):
 result = outer_function(5)  # The inner function adds 10 to 5, so the result is 15
 print(f"Result of nested function is: {result}")  # This will print: "Result of nested function is: 15"
 
-############################ Advanced Functions: Level 12 - Partial Functions
+############################ ------------------------------------------------------- Advanced Functions: Level 12 - Partial Functions
 # Partial functions allow us to fix some arguments of a function
 from functools import partial
 
@@ -197,7 +197,7 @@ double_multiply = partial(multiply, 2)  # Now, 'double_multiply' takes only one 
 result = double_multiply(5)  # This multiplies 2 by 5, so the result is 10
 print(f"Multiplying 2 by 5 gives: {result}")  # This will print: "Multiplying 2 by 5 gives: 10"
 
-############################ Advanced Functions: Level 13 - Function Caching
+############################  ------------------------------------------------------- Advanced Functions: Level 13 - Function Caching
 # Function caching to optimize recursive functions (avoids recomputation)
 from functools import lru_cache
 
